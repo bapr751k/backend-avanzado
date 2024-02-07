@@ -9,6 +9,7 @@ connectDB()
 app.use(express.json()) // Middleware para parsear el body de las peticiones
 app.use(express.urlencoded({extended: false}))
 app.use('/api/tareas', require('./routes/tareasRoutes'))
+app.use('/api/users', require('./routes/usersRoutes'))
 app.use(errorHandler)
 app.listen(port, () => console.log(`Servidor inicializado en el puerto ${port}!`))
 
